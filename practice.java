@@ -2,14 +2,11 @@ import java.util.*;
 
 public class practice {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int a = sc.nextInt(), b = sc.nextInt();
-        System.out.println(a + " , " + b);
-
-        a = a + b;
-        b = a - b;
-        a = a - b;
-        System.out.println(a + " , " + b);
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 2; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
     }
 }
