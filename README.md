@@ -6,3 +6,4 @@
 
 1. Flowchart, Pseudo code and Variables.
 2. Data types, Input, Type conversion/casting, Operators and Conditional statements.
+3. Compiler, JVM and Loops.
