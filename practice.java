@@ -4,24 +4,21 @@ public class practice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int num1 = sc.nextInt();
-        boolean isPrime = true;
+        int row = sc.nextInt();
+        // int col = sc.nextInt();
 
-        if (num1 == 2) {
-            System.out.println("Prime");
-        } else {
-            for (int i = 2; i <= Math.sqrt(num1); i++) {
-                if (num1 % i == 0) {
-                    isPrime = false;
-                    break;
-                }
+        for (int i = 1; i <= row; i++) {
+            for (int j = row - 1; j >= i; j--) {
+                System.out.print("  ");
             }
-
-            if (isPrime) {
-                System.out.println("Prime");
-            } else {
-                System.out.println("Not Prime");
+            for (int j = i; j >= 2; j--) {
+                System.out.print(j + " ");
             }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
         }
+
     }
 }
