@@ -2,11 +2,26 @@ import java.util.*;
 
 public class practice {
     public static void main(String[] args) {
-        for (int i = 1; i <= 3; i++) {
-            for (int j = 1; j <= 2; j++) {
-                System.out.print(j + " ");
+        Scanner sc = new Scanner(System.in);
+
+        int num1 = sc.nextInt();
+        boolean isPrime = true;
+
+        if (num1 == 2) {
+            System.out.println("Prime");
+        } else {
+            for (int i = 2; i <= Math.sqrt(num1); i++) {
+                if (num1 % i == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
-            System.out.println();
+
+            if (isPrime) {
+                System.out.println("Prime");
+            } else {
+                System.out.println("Not Prime");
+            }
         }
     }
 }
