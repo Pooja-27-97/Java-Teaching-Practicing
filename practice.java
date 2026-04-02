@@ -1,24 +1,30 @@
 import java.util.*;
 
 public class practice {
+    public static void printHello() {
+        System.out.println("Hello!");
+    }
+
+    public static void printSum(int a, int b) {
+        int result = a + b;
+        System.out.println("Sum: " + result);
+    }
+
+    public static int printSum(int a, int b, int c) {
+        int sum = (a + b + c);
+        return sum;
+    }
+
+    public static float printSum(float a, float b) {
+        return (a + b);
+    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int row = sc.nextInt();
-        // int col = sc.nextInt();
-
-        for (int i = 1; i <= row; i++) {
-            for (int j = row - 1; j >= i; j--) {
-                System.out.print("  ");
-            }
-            for (int j = i; j >= 2; j--) {
-                System.out.print(j + " ");
-            }
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j + " ");
-            }
-            System.out.println();
-        }
-
+        System.out.println("Created a function");
+        printHello();
+        printSum(10, 20);
+        System.out.println(printSum(100.24f, 20.49f));
+        int sum = printSum(5, 20, 10);
+        System.out.println(sum);
     }
 }
