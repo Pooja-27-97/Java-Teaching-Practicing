@@ -9,3 +9,4 @@
 3. Compiler, JVM and Loops.
 4. Questions on loops and Patterns.
 5. Functions and Prime number.
+6. Arrays and binary to decimal conversion and vise-versa.
