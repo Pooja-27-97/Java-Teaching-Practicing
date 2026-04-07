@@ -71,22 +71,64 @@ public class Array {
         System.out.println("Pairs: " + pairs);
     }
 
-    public static void printSubArray(int arr[]) {
+    public static void printSubArray(int arr[]) { // O(n^3)
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             int start = i;
             for (int j = i; j < arr.length; j++) {
                 int end = j;
+                sum = 0;
                 for (int k = start; k <= end; k++) {
-                    System.out.print(arr[k] + ", ");
+                    // System.out.print(arr[k] + ", ");
+                    sum += arr[k];
                 }
-                System.out.println();
+                if (sum > max) {
+                    max = sum;
+                }
             }
-            System.out.println();
         }
+        System.out.println("Max: " + max);
+    }
+
+    public static void prefixSubArray(int arr[]) { // O(n^2)
+        int max = Integer.MIN_VALUE;
+        int prefix[] = new int[arr.length];
+        prefix[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i - 1] + arr[i];
+        }
+
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int start = i;
+            for (int j = i; j < arr.length; j++) {
+                int end = j;
+                sum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1];
+
+                if (sum > max)
+                    max = sum;
+            }
+        }
+        System.out.println("Max: " + max);
+    }
+
+    public static void kadens(int arr[]) { // O(n)
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+
+            if (sum < 0)
+                sum = 0;
+            max = Math.max(sum, max);
+        }
+        System.out.println("Max: " + max);
     }
 
     public static void main(String args[]) {
-        int arr[] = { 4, 5, 8, 16, 25, 78, 102 };
+        int arr[] = { -3, -2, 4, -1, 5 };
 
         // System.out.println("Largest elt: " + printLargest(arr));
         // System.out.println("Smallest elt: " + printSmallest(arr));
@@ -112,6 +154,8 @@ public class Array {
         // System.out.println();
 
         // printPairs(arr);
-        printSubArray(arr);
+        // printSubArray(arr);
+        // prefixSubArray(arr);
+        kadens(arr);
     }
 }
