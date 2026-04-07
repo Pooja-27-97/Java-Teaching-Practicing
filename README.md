@@ -10,3 +10,4 @@
 4. Questions on loops and Patterns.
 5. Functions and Prime number.
 6. Arrays and binary to decimal conversion and vise-versa.
+7. Linear and Binary Search, Reverse an array, Printing pairs and sub-arrays in an array.
