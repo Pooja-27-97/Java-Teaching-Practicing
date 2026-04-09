@@ -13,4 +13,4 @@
 7. Linear and Binary Search, Reverse an array, Printing pairs and sub-arrays in an array.
 8. Brute force, Prefix array and Kadens algorithm to find subarray sum.
 9. Trapping rain water problem.
-10. Buy & sell stocks problem.
+10. Buy & sell stocks problem and Sorting techniques(Theory).
