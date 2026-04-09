@@ -12,4 +12,5 @@
 6. Arrays and binary to decimal conversion and vise-versa.
 7. Linear and Binary Search, Reverse an array, Printing pairs and sub-arrays in an array.
 8. Brute force, Prefix array and Kadens algorithm to find subarray sum.
-9. Trapping rain water and Buy & sell stocks.
+9. Trapping rain water problem.
+10. Buy & sell stocks problem.
