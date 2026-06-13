@@ -13,9 +13,9 @@ public class Sorting {
     }
 
     public static void selectionSort(int arr[]) {
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (int i = 0; i < arr.length - 1; i++) { //turns
             int minPos = i;
-            for (int j = i + 1; j < arr.length; j++) {
+            for (int j = i + 1; j < arr.length; j++) { //minimum element
                 if (arr[minPos] > arr[j])
                     minPos = j;
             }
@@ -25,6 +25,20 @@ public class Sorting {
             arr[i] = temp;
         }
         printArray(arr);
+    }
+
+    public static void insertionSort(int arr[]) {
+        for (int i = 1; i < arr.length; i++) {
+            int curr = arr[i];
+            int prev = i - 1;
+            // finding out the correct position to insert
+            while (prev >= 0 && arr[prev] > curr) {
+                arr[prev + 1] = arr[prev];
+                prev--;
+            }
+            // insertion
+            arr[prev + 1] = curr;
+        }
     }
 
     public static void printArray(int arr[]) {
@@ -37,6 +51,8 @@ public class Sorting {
     public static void main(String[] args) {
         int elts[] = { 5, 4, 1, 3, 2 };
         // bubbleSort(elts);
-        selectionSort(elts);
+        // selectionSort(elts);
+        insertionSort(elts);
+        printArray(elts);
     }
 }
