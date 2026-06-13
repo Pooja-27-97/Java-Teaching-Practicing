@@ -154,8 +154,8 @@ public class Array {
         // System.out.println();
 
         // printPairs(arr);
-        // printSubArray(arr);
+        printSubArray(arr);
         // prefixSubArray(arr);
-        kadens(arr);
+        // kadens(arr);
     }
 }
