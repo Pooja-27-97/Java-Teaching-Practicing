@@ -1,3 +1,4 @@
+import java.util.*;
 public class Sorting {
     public static void bubbleSort(int elts[]) {
         for(int i=0; i < elts.length - 1; i++) {
@@ -71,10 +72,11 @@ public class Sorting {
     }
     public static void main(String[] args) {
         // int elts[] = { 5, 4, 1, 3, 2 , 7, 6};
-        int elts[] = { 1, 4, 1, 3, 2, 4, 3, 7 };
+        // int elts[] = { 1, 4, 1, 3, 2, 4, 3, 7 };
+        // Arrays.sort(elts,Collections.reverseOrder());
         // bubbleSort(elts);
         // selectionSort(elts);
         // insertionSort(elts);
-        countSort(elts);
+        // countSort(elts);
     }
 }
