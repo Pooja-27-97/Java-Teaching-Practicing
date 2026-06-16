@@ -1,6 +1,4 @@
-## Here teaching Java concepts 4 days a week
-
-### Consistent learning
+## Consistent learning and practice
 
 #### Days
 
@@ -22,3 +20,4 @@
 1. Arrays and sub-arrays
 2. Sorting algorithms
 3. OOPS Concepts
+4. Encapsulation and Constructors
